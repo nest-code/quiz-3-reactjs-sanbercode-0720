@@ -3,7 +3,6 @@
 }
 
 .foto {
-  /* background-color: red; */
   height: 50px;
   width: 200px;
   background-image: url("./logo.png");
@@ -13,7 +12,9 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 5px 50px 5px px ;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: white;
   height: 60px;
   box-sizing: border-box;
   border-radius: 4px;

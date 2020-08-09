@@ -13,7 +13,6 @@ const User = {
 const About = () => {
   return (
     <React.Fragment>
-      <div className="about">
         <h1>Halaman About</h1>
           <table >
             <tr>
@@ -41,7 +40,6 @@ const About = () => {
               <td>{User.telegram}</td>
             </tr>
           </table>
-      </div>
     </React.Fragment>
   )
 
