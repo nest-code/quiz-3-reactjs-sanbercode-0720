@@ -1,48 +1,37 @@
-import React from 'react';
-
-const User = {
-  name: 'Ernesto Andre Yulian Manurung',
-  email: 'ernestoandreyulianmanurung',
-  os: 'Windows 10',
-  github: 'github.com/nest-code',
-  telegram: '@ernestomanurung'
-};
+import React, { Component } from 'react'
+import Item from './Item'
 
 
-
-const About = () => {
-  return (
-    <React.Fragment>
-        <h1>Halaman About</h1>
-          <table >
-            <tr>
-              <td>Nama Peserta</td>
-              <td>{User.name}</td>
-            </tr>
-
-            <tr>
-              <td>Email</td>
-              <td>{User.email}</td>
-            </tr>
-
-            <tr>
-              <td>Sistem Operasi</td>
-              <td>{User.os}</td>
-            </tr>
-
-            <tr>
-              <td>Akun Github</td>
-              <td>{User.github}</td>
-            </tr>
-
-            <tr>
-              <td>Akun Telegram</td>
-              <td>{User.telegram}</td>
-            </tr>
-          </table>
-    </React.Fragment>
-  )
-
+class About extends Component {
+  
+  render() {
+    let dataDiri = [
+      {
+      name: "Ernesto Andre Yulian Manurung", 
+      email: "ernestoandreyulian@gmail.com",
+      os:"Windows 10",
+      github: "github.com/nest-code",
+      telegram : "@ernestomanurung"
+      }
+    ]
+    
+    return (
+      <>
+       <h1 style={{textAlign : "center"}}> Daftar Harga Buah</h1>
+        <table style={{border: "1px solid", width: "40%", margin: "0 auto"}}>
+           
+            {dataDiri.map((el, index)=> {
+              return (
+                <>
+                  <Item item={el} key={index}/>
+                </>
+                )
+              })}
+ 
+        </table>
+      </>
+    )
+  }
 }
 
-export default About;
+export default About

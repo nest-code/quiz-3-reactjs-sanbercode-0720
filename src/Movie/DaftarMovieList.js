@@ -3,9 +3,7 @@ import axios from "axios"
 import {DaftarMovieContext} from "./DaftarMovieContext"
 
 const DaftarMovieList = () =>{
-
   const [daftarMovie, setDaftarMovie] = useContext(DaftarMovieContext)
-
   useEffect( () => {
     if (daftarMovie.lists === null){
       axios.get(`http://backendexample.sanbercloud.com/api/movie`)
@@ -34,7 +32,6 @@ const DaftarMovieList = () =>{
 
   const handleDelete = (event) => {
     let idDataMovie = parseInt(event.target.value)
-
     let newLists = daftarMovie.lists.filter(el => el.id !== idDataMovie)
 
     axios.delete(`http://backendexample.sanbercloud.com/api/movie/${idDataMovie}`)
@@ -63,7 +60,6 @@ const DaftarMovieList = () =>{
           </tr>
         </thead>
         <tbody>
-
             {
               daftarMovie.lists !== null && daftarMovie.lists.map((item, index)=>{
                 return(                    

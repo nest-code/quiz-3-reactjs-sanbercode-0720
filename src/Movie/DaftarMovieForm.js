@@ -3,7 +3,6 @@ import axios from "axios"
 import {DaftarMovieContext} from "./DaftarMovieContext"
 
 
-
 const DaftarMovieForm = () =>{
   const [daftarMovie, setDaftarMovie] = useContext(DaftarMovieContext)
   const [input, setInput] = useState({title: "", description: "", year: 0, duration: 0, genre: "", rating:0})

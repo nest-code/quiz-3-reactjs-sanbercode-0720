@@ -95,7 +95,6 @@ const DaftarMovie = () => {
             <th>Year</th>
             <th>Genre</th>
             <th>Rating</th>
-
           </tr>
         </thead>
         <tbody>
